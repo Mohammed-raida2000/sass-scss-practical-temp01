@@ -1,0 +1,18 @@
+//  هدا الملف بستدعي فيه الملفات  من  ال ساس الرئيسي  عشان  اطلع ملف سي اس اس 
+
+//     عشان ما اعمل اوفر رايد على اي ملف لازم  نرتبهم حسب الاكتر طلب  كتالتي 
+
+// import more than sass file  \
+
+
+@use '../css/sass/helpers/variables';
+@use './sass/helpers/mixins';
+@use './sass/layout/grid';
+@use './sass/components/buttons';
+@use './sass/components/heading';
+
+@use './homepage-rtl';
+@use './sass/pages/globalpage';
+@use './sass/layout/header';
+@use './sass/pages/homepage';
+@use './sass/layout/footer';

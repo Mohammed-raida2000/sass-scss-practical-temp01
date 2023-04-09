@@ -1,0 +1,49 @@
+/*start slider*/
+.slider {
+    q {
+        font: {
+            size: 20px;
+            weight: bold;
+            family: arial, tahoma
+        }
+
+        // style: italic;
+        text-align: center;
+        width: 80%;
+        display: block;
+        margin: 30px auto;
+        color: #5e5e5e;
+        line-height: 1.7;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .bullets {
+        text-align: center;
+        margin-top: 15px;
+
+        li {
+            /*! في تغير اتجاه لصفحة من  عربي لانجليز او العكس هاي الخاصية بتوفر عليك كتير بحثيت انوا من تلقاء نفسها بتشتغل هالشغل */
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #ccc;
+            border: 3px soild #ccc;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &.active,
+            &:hover {
+                border: 3px solid;
+                background-color: white;
+                transition: 0.3s;
+            }
+        }
+    }
+}
+
+
+/*end slider*/

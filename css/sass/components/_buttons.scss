@@ -1,0 +1,45 @@
+/*!main buttons global*/
+.main-button {
+    background-color: rgba($color: orangered, $alpha: 0.8);
+    min-width: 120px;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px 15px;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        background-color: orangered
+    }
+
+}
+
+.toggler {
+    position: absolute;
+    right: 17px;
+    top: 23px;
+    cursor: pointer;
+    display: none;
+
+    /// !* tفي مشكلة وجعت راسي */
+    @media (min-width: 768px) {
+        display: block;
+    }
+}
+
+span {
+    display: block;
+    background-color: orangered;
+    height: 4px;
+    width: 40px;
+    margin-bottom: 5px;
+
+    &:nth-last-of-type(2) {
+        width: 30px;
+    }
+}
+
+
+/*!main buttons global*/

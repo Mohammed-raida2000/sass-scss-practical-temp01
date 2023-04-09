@@ -1,0 +1,82 @@
+// webssite layout bydefilt LTR 
+/*  Start header*/
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+
+    .log {
+        position: relative;
+
+        @media (min-width: 767px) {
+            text-align: center;
+            float: none;
+            width: 100%;
+        }
+
+        @media (min-width: 991px) {
+            float: left;
+            width: 30%;
+            text-align: left;
+        }
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    p {
+        color: #ccc;
+        margin: 5px 0 0;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: orangered;
+    border-radius: 15px;
+
+    @media (min-width: 767px) {
+        width: 100%;
+        float: none;
+        margin-top: 30px;
+    }
+
+    @media (min-width: 991px) {
+        float: left;
+        width: 70%;
+        margin-top: 0px;
+    }
+
+    //////////////////////
+    @media (max-width: 768px) {
+        display: none;
+
+    }
+}
+
+li {
+    width: 20%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+
+    @media (max-width: 768px) {
+        display: block;
+        float: none;
+        border-radius: 0;
+    }
+
+    a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        padding: 20px 10px;
+    }
+
+    :hover {
+        color: #ddd;
+    }
+}
+
+/*  end  header */
