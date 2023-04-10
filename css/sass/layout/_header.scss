@@ -36,15 +36,23 @@ header {
     background-color: orangered;
     border-radius: 15px;
 
+    @media (min-width: 768px) {
+        float: none;
+        width: 100%;
+        margin-top: 30px;
+        display: block !important;
+    }
+
     @media (min-width: 991px) {
         float: left;
         width: 70%;
-        margin-top: 0px;
+        margin-top: 20px;
     }
 
-    //////////////////////
-    @media (max-width: 768px) {
+    ////////// hidden nav bar ////////////
+    @media (max-width: 767px) {
         display: none;
+        border-radius: 0;
 
     }
 }
@@ -55,7 +63,7 @@ li {
     text-align: center;
     font-size: 13px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
         display: block;
         float: none;
         border-radius: 0;

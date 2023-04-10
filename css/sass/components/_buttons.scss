@@ -18,28 +18,32 @@
 
 .toggler {
     position: absolute;
-    right: 17px;
-    top: 23px;
+    top: 30px;
+    left: 90%;
     cursor: pointer;
     display: none;
 
     /// !* tفي مشكلة وجعت راسي */
-    @media (min-width: 768px) {
+    @media (max-width: 767px) {
         display: block;
     }
-}
 
-span {
-    display: block;
-    background-color: orangered;
-    height: 4px;
-    width: 40px;
-    margin-bottom: 5px;
+    span {
+        display: block;
+        background-color: orangered;
+        height: 4px;
+        width: 40px;
+        margin-bottom: 5px;
 
-    &:nth-last-of-type(2) {
-        width: 30px;
+        &:nth-last-of-type(2) {
+            width: 30px;
+        }
     }
+
+
 }
+
+
 
 
 /*!main buttons global*/

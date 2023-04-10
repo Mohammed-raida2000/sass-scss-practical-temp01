@@ -40,7 +40,7 @@
         </div>
     </header>
     <!-- start slider -->
-    <div class="slider">
+    <div class="slider ">
         <div class="containar">
             <q>Lorem ipsum dolor sit amet consectetur adipisicing elit. In sit quae illo suscipit pariatur cumque libero
                 laboriosam quis consectetur quaerat architecto ducimus maxime inventore amet optio repellat earum, sed
@@ -58,12 +58,12 @@
     </div>
     <!-- en slider -->
     <!-- start heading top -->
-    <div class="services">
+    <div class="services ">
         <div class="containar">
             <div class="head-to-top">
                 <h2>Our Services</h2>
             </div>
-            <div class="service-box">
+            <div class="service-box center-mobile">
                 <h3 class="icon-face"><i class="fa-sharp fa-solid fa-earth-africa fa-spin" style="color: #db671a;"></i>
                     inrtrofacing </h3>
                 <p class="parg-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore, sint?
@@ -72,7 +72,7 @@
                     illo repellendus sequi eius magnam iusto possimus</p>
                 <a href="#">ReadMore >></a>
             </div>
-            <div class="service-box">
+            <div class="service-box center-mobile">
                 <h3 class="icon-face"><i class="fa-sharp fa-solid fa-users-gear" style="color: #db671a;"></i>
                     inrtrofacing
                 </h3>
@@ -82,7 +82,7 @@
                     illo repellendus sequi eius magnam iusto possimus</p>
                 <a href="#">ReadMore >></a>
             </div>
-            <div class="service-box">
+            <div class="service-box center-mobile">
                 <h3 class="icon-face"><i class="fa-sharp fa-solid fa-gears" style="color: #db671a;"></i></i></i>
                     inrtrofacing
                 </h3>
@@ -241,6 +241,15 @@
         <div class="clearfix"></div>
     </div>
     <!-- end footer  -->
+    <!-- script toggle same bootstrabe -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            $('.toggler').on('click', function () {
+                $('.navbar').slideToggle();
+            })
+        })
+    </script>
 </body>
 
 </html>
