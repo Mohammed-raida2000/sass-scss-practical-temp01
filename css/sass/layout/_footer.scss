@@ -11,28 +11,51 @@
     .details,
     .contacts {
         float: left;
-        // margin-right: 3%;
+
+        :not(:last-of-type) {
+            padding-right: 10px;
+        }
+    }
+
+    .title {
+        color: #444;
+        font-weight: normal;
+        margin-top: 0;
+
     }
 
     .captions {
-        width: 50%;
+
+        @media (max-width:767px) {
+            width: 100%;
+        }
+
+        @media (min-width:768px) {
+            width: 50%;
+
+        }
 
         .cap-name {
             overflow-x: hidden;
             margin-bottom: 10px;
 
-            img {
-                float: left;
+            .foot-img {
+                @media (min-width:768px) {
+                    float: left;
+                }
+
                 height: 150px;
                 width: 150px;
-                border: 6px solid #777
+                border: 6px solid #777;
             }
 
             .text {
-                float: left;
-                width: calc(100% - 180px);
-                margin-right: 15px;
-                margin-left: 15px;
+                @media (min-width:768px) {
+                    float: left;
+                    margin-right: 15px;
+                    margin-left: 15px;
+                    width: calc(100% - 180px);
+                }
 
                 h4 {
                     margin: 20px 0 0;
@@ -52,14 +75,26 @@
     }
 
     .details {
-        width: 25%;
+
+        @media (min-width:767px) {
+            width: 100%;
+        }
+
+        @media (min-width:991px) {
+            width: 25%;
+        }
 
         ul {
             color: #777;
             line-height: 1.6;
 
             li {
+                width: 100%;
+                text-align: left;
+                padding: 5px;
+
                 span {
+
                     color: orangered;
                     font-weight: bold;
                 }
@@ -70,7 +105,7 @@
             color: #777;
 
             >h4 {
-                margin: 8px 6px;
+                margin: 5px 0;
             }
 
             span {
@@ -84,7 +119,15 @@
 }
 
 .contacts {
-    width: 25%;
+
+
+    @media (min-width:767px) {
+        width: 100%;
+    }
+
+    @media (min-width:991px) {
+        width: 25%;
+    }
 
     input[type="text"],
     input[type="email"],
@@ -99,20 +142,11 @@
 
     textarea {
         height: 140px;
-        
+
     }
 }
 
-.title {
-    color: #444;
-    font-weight: normal;
-}
 
-.cap-name {
-    .foot-img {
-        width: 150px;
-    }
 
-}
 
 /*! end footer */

@@ -11,7 +11,7 @@
         text-align: center;
         width: 80%;
         display: block;
-        margin: 30px auto;
+        margin: 15px auto;
         color: #5e5e5e;
         line-height: 1.7;
     }
@@ -65,6 +65,11 @@
         border-radius: 15px;
         text-transform: capitalize;
 
+        @media (max-width:767px) {
+            width: 300px;
+
+        }
+
         &::before {
             content: "";
             position: absolute;
@@ -83,11 +88,16 @@
 .services {
 
     .service-box {
-        float: left;
-        width: calc(100%/3);
+        width: 100%;
+        float: none;
 
-        &:not(:last-of-type) {
-            padding-right: 20px;
+        @media (min-width:768px) {
+            float: left;
+            width: calc(100%/3);
+
+            &:not(:last-of-type) {
+                padding-right: 20px;
+            }
         }
 
         .icon-face {
@@ -124,41 +134,58 @@
 .our-players {
 
     .players-box {
+        padding-right: 15px;
+        margin-bottom: 40px;
+        width: 100%;
         float: left;
-        width: calc(100%/5);
-        padding-right: 20px;
 
-        .players-image {
-            max-width: 100%;
+        @media (min-width:768px) {
+            width: calc(100%/2);
+            text-align: center;
+            padding-left: 15px;
         }
 
-        .icon-face {
-            font-size: 15px;
-            color: #666161;
-            font-weight: normal;
-            margin: 10px 0;
-
-            span {
-                font-weight: bold;
-                font-size: 14px;
-            }
+        @media (min-width:992px) {
+            width: calc(100%/3);
+            text-align: left;
         }
 
-        .parg-desc {
-            font-size: 15px;
-            color: #3e3939;
-            margin: 0;
-            line-height: 1.5;
+        @media (min-width:1199px) {
+            width: calc(100%/5);
         }
 
-        a {
-            font-size: 13px;
-            color: orangered;
-            text-decoration: none;
+    }
+
+    .players-image {
+        max-width: 100%;
+    }
+
+    .icon-face {
+        font-size: 15px;
+        color: #666161;
+        font-weight: normal;
+        margin: 10px 0;
+
+        span {
             font-weight: bold;
+            font-size: 14px;
         }
     }
 
+    .parg-desc {
+        font-size: 15px;
+        color: #3e3939;
+        margin: 15px auto;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+
+    a {
+        font-size: 13px;
+        color: orangered;
+        text-decoration: none;
+        font-weight: bold;
+    }
 }
 
 /*! end our-players*/
@@ -167,16 +194,22 @@
 .is-lorem {
     .lorem {
         .lorem-box {
-            float: left;
-            width: calc(94% / 3);
-            margin-right: 20px;
+            @media (max-width:768px) {
+                width: calc(100%/3);
+                float: none;
+            }
 
-            :not(:last-of-type) {
-                margin-right: 3%;
+            @media (min-width:992px) {
+                float: left;
+                width: calc(94% / 4);
+                margin-right: 20px;
             }
 
             .lorem-img {
-                width: 100%;
+                width: 96%;
+                margin-right: 4%;
+                margin-bottom: 4%;
+                border-radius: 3px;
             }
         }
     }

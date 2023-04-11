@@ -116,8 +116,8 @@
 
 body {
   font-size: 20px;
-  font-family: "Open Sans", sans-serif;
-  font-margin: 0;
+  font-family: "Open Sans", sans-serif, tahoma;
+  margin: 0;
 }
 
 ul,
@@ -217,7 +217,7 @@ li :hover {
   text-align: center;
   width: 80%;
   display: block;
-  margin: 30px auto;
+  margin: 15px auto;
   color: #5e5e5e;
   line-height: 1.7;
 }
@@ -268,6 +268,11 @@ li :hover {
   border-radius: 15px;
   text-transform: capitalize;
 }
+@media (max-width: 767px) {
+  .head-to-top h2 {
+    width: 300px;
+  }
+}
 .head-to-top h2::before {
   content: "";
   position: absolute;
@@ -281,11 +286,17 @@ li :hover {
 
 /*!start services */
 .services .service-box {
-  float: left;
-  width: calc(100%/3);
+  width: 100%;
+  float: none;
 }
-.services .service-box:not(:last-of-type) {
-  padding-right: 20px;
+@media (min-width: 768px) {
+  .services .service-box {
+    float: left;
+    width: calc(100%/3);
+  }
+  .services .service-box:not(:last-of-type) {
+    padding-right: 20px;
+  }
 }
 .services .service-box .icon-face {
   text-transform: uppercase;
@@ -312,30 +323,50 @@ li :hover {
 /*!end services*/
 /*! start our-players*/
 .our-players .players-box {
+  padding-right: 15px;
+  margin-bottom: 40px;
+  width: 100%;
   float: left;
-  width: calc(100%/5);
-  padding-right: 20px;
 }
-.our-players .players-box .players-image {
+@media (min-width: 768px) {
+  .our-players .players-box {
+    width: calc(100%/2);
+    text-align: center;
+    padding-left: 15px;
+  }
+}
+@media (min-width: 992px) {
+  .our-players .players-box {
+    width: calc(100%/3);
+    text-align: left;
+  }
+}
+@media (min-width: 1199px) {
+  .our-players .players-box {
+    width: calc(100%/5);
+  }
+}
+.our-players .players-image {
   max-width: 100%;
 }
-.our-players .players-box .icon-face {
+.our-players .icon-face {
   font-size: 15px;
   color: #666161;
   font-weight: normal;
   margin: 10px 0;
 }
-.our-players .players-box .icon-face span {
+.our-players .icon-face span {
   font-weight: bold;
   font-size: 14px;
 }
-.our-players .players-box .parg-desc {
+.our-players .parg-desc {
   font-size: 15px;
   color: #3e3939;
-  margin: 0;
+  margin: 15px auto;
   line-height: 1.5;
+  max-width: 500px;
 }
-.our-players .players-box a {
+.our-players a {
   font-size: 13px;
   color: orangered;
   text-decoration: none;
@@ -344,16 +375,24 @@ li :hover {
 
 /*! end our-players*/
 /*! start lorem*/
-.is-lorem .lorem .lorem-box {
-  float: left;
-  width: calc(94% / 3);
-  margin-right: 20px;
+@media (max-width: 768px) {
+  .is-lorem .lorem .lorem-box {
+    width: calc(100%/3);
+    float: none;
+  }
 }
-.is-lorem .lorem .lorem-box :not(:last-of-type) {
-  margin-right: 3%;
+@media (min-width: 992px) {
+  .is-lorem .lorem .lorem-box {
+    float: left;
+    width: calc(94% / 4);
+    margin-right: 20px;
+  }
 }
 .is-lorem .lorem .lorem-box .lorem-img {
-  width: 100%;
+  width: 96%;
+  margin-right: 4%;
+  margin-bottom: 4%;
+  border-radius: 3px;
 }
 
 /*! end lorem*/
@@ -370,24 +409,47 @@ li :hover {
 .footer .contacts {
   float: left;
 }
-.footer .captions {
-  width: 50%;
+.footer .captions :not(:last-of-type),
+.footer .details :not(:last-of-type),
+.footer .contacts :not(:last-of-type) {
+  padding-right: 10px;
+}
+.footer .title {
+  color: #444;
+  font-weight: normal;
+  margin-top: 0;
+}
+@media (max-width: 767px) {
+  .footer .captions {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .footer .captions {
+    width: 50%;
+  }
 }
 .footer .captions .cap-name {
   overflow-x: hidden;
   margin-bottom: 10px;
 }
-.footer .captions .cap-name img {
-  float: left;
+.footer .captions .cap-name .foot-img {
   height: 150px;
   width: 150px;
   border: 6px solid #777;
 }
-.footer .captions .cap-name .text {
-  float: left;
-  width: calc(100% - 180px);
-  margin-right: 15px;
-  margin-left: 15px;
+@media (min-width: 768px) {
+  .footer .captions .cap-name .foot-img {
+    float: left;
+  }
+}
+@media (min-width: 768px) {
+  .footer .captions .cap-name .text {
+    float: left;
+    margin-right: 15px;
+    margin-left: 15px;
+    width: calc(100% - 180px);
+  }
 }
 .footer .captions .cap-name .text h4 {
   margin: 20px 0 0;
@@ -398,12 +460,24 @@ li :hover {
   line-height: 1.7;
   color: #777;
 }
-.footer .details {
-  width: 25%;
+@media (min-width: 767px) {
+  .footer .details {
+    width: 100%;
+  }
+}
+@media (min-width: 991px) {
+  .footer .details {
+    width: 25%;
+  }
 }
 .footer .details ul {
   color: #777;
   line-height: 1.6;
+}
+.footer .details ul li {
+  width: 100%;
+  text-align: left;
+  padding: 5px;
 }
 .footer .details ul li span {
   color: orangered;
@@ -413,7 +487,7 @@ li :hover {
   color: #777;
 }
 .footer .details .working > h4 {
-  margin: 8px 6px;
+  margin: 5px 0;
 }
 .footer .details .working span {
   margin-bottom: 5px;
@@ -421,8 +495,15 @@ li :hover {
   font-size: 14px;
 }
 
-.contacts {
-  width: 25%;
+@media (min-width: 767px) {
+  .contacts {
+    width: 100%;
+  }
+}
+@media (min-width: 991px) {
+  .contacts {
+    width: 25%;
+  }
 }
 .contacts input[type=text],
 .contacts input[type=email],
@@ -436,15 +517,6 @@ li :hover {
 }
 .contacts textarea {
   height: 140px;
-}
-
-.title {
-  color: #444;
-  font-weight: normal;
-}
-
-.cap-name .foot-img {
-  width: 150px;
 }
 
 /*! end footer */
