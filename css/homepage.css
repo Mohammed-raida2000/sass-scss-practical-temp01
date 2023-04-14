@@ -109,6 +109,74 @@
   z-index: -1;
 }
 
+/*! start rigth to $dir-left; rtl directions*/
+/*  Start header*/
+@media (min-width: 991px) {
+  header .log {
+    float: right;
+    text-align: right;
+  }
+}
+
+@media (min-width: 991px) {
+  .navbar {
+    float: right;
+  }
+}
+
+li {
+  float: right;
+}
+
+/*  end  header */
+/*start slider*/
+/*end slider*/
+/*!start services */
+@media (min-width: 768px) {
+  .services .service-box {
+    float: right;
+  }
+}
+
+/*!end services*/
+/*! start our-players*/
+.our-players .players-box {
+  float: right;
+}
+@media (min-width: 992px) {
+  .our-players .players-box {
+    width: calc(100%/3);
+    text-align: right;
+  }
+}
+
+/*! end our-players*/
+/*! start lorem*/
+@media (min-width: 992px) {
+  .is-lorem .lorem {
+    float: right;
+  }
+}
+
+/*! end lorem*/
+/*! stat  footer */
+.footer .captions,
+.footer .details,
+.footer .contacts {
+  float: right;
+}
+@media (min-width: 768px) {
+  .footer .cap-name .foot-img {
+    float: right;
+  }
+}
+@media (min-width: 768px) {
+  .footer .cap-name .text {
+    float: right;
+  }
+}
+
+/*! end footer */
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

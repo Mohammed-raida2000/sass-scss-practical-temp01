@@ -5,7 +5,7 @@
 // import more than sass file  \
 
 
-@use '../css/sass/helpers/variables';
+@use './sass/helpers/variables';
 @use './sass/helpers/mixins';
 @use './sass/layout/grid';
 @use './sass/components/buttons';

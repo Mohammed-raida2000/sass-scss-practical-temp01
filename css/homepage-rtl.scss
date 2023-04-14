@@ -1,3 +1,110 @@
+@use './sass/helpers/variables';
+@import './sass/helpers/variables';
 // webssite layout convert ltr >> rtl 
 $dir-left: right;
 $dir-right: left;
+
+
+/*! start rigth to $dir-left; rtl directions*/
+
+// webssite layout bydefilt LTR 
+/*  Start header*/
+header {
+
+    .log {
+
+        @media (min-width: 767px) {}
+
+        @media (min-width: 991px) {
+            float: $dir-left;
+
+            text-align: $dir-left;
+
+        }
+    }
+}
+
+.navbar {
+
+    @media (min-width: 991px) {
+        float: $dir-left;
+
+    }
+}
+
+li {
+    float: $dir-left;
+}
+
+/*  end  header */
+
+/*start slider*/
+//done
+/*end slider*/
+
+/*!start services */
+.services {
+
+    .service-box {
+        @media (min-width:768px) {
+            float: $dir-left;
+        }
+
+    }
+}
+
+/*!end services*/
+/*! start our-players*/
+.our-players {
+
+    .players-box {
+        float: $dir-left;
+
+        @media (min-width:992px) {
+            width: calc(100%/3);
+            text-align: $dir-left;
+        }
+
+    }
+
+}
+
+/*! end our-players*/
+
+/*! start lorem*/
+.is-lorem {
+    .lorem {
+        @media (min-width:992px) {
+            float: $dir-left;
+        }
+    }
+}
+
+/*! end lorem*/
+/*! stat  footer */
+.footer {
+
+    .captions,
+    .details,
+    .contacts {
+        float: $dir-left;
+    }
+
+    .cap-name {
+        .foot-img {
+            @media (min-width:768px) {
+                float: $dir-left;
+            }
+        }
+
+        .text {
+            @media (min-width:768px) {
+                float: $dir-left;
+            }
+        }
+
+    }
+}
+
+
+/*! end footer */
